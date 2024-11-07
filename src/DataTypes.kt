@@ -42,5 +42,56 @@ fun main() {
     println("Estatura real:")
     println(estaturaReal)
 
+    println("Textos")
+    val inicial1: Char = 'J'
+    val inicial2: Char = 'A'
+    val inicial3: Char = 'V'
+    val nuevaLinea: Char = '\n'
+
+    print(inicial1)
+    print(inicial2)
+    print(inicial3)
+    print(nuevaLinea)
+
+    val iniciales: String = "JAV"
+    println(iniciales)
+    val casosEspeciales: String = "\tJ\'A\'V\\ \$"
+    println(casosEspeciales)
+
+    println("Entrada de datos(readline)")
+    val nombre = readln()  //funcion para entrada estandar de datos por consola
+    println(nombre)
+    println("Concatenación:")
+    println("Hola " + nombre + "!")
+
+    println("String Templates:")//nos sirve para concatenar string en kotling de forma optimizada
+    println("Hola $nombre!")//requiere el simbolo de dollar antes de llamar a la variable
+    /*val longitud = nombre.length
+    println("Longitud: $longitud")*/
+    println("Longitud: ${nombre.length}")//encapsular con llaves en caso de acceder a propiedades o funciones {}
+
+    println("Multiline String")//Raw String
+    val lineasMultiples: String = """
+        Hola, estoy "escribiendo"
+            con sangría!
+    """
+    println(lineasMultiples)//multiline String permite cadenas de texto con formatos o estilos más completos
+
+    println("Nulos en kotlin")
+    var ganancias: Int? = null//siempre que algo puede ser null, debe ser marcado con su signo de interrogacion
+    println("Salario: $ganancias")
+    var nombreUsuario: String? = "Juan Antonio"
+    nombreUsuario = null
+    println("Longitud de nombre de usuario con ?: ${nombreUsuario?.length}")//lo que está a la derecha de ? no se ejecutara si es null
+
+    val nombreRandom: String? = "CursoTony"
+    nombreUsuario = nombreRandom!!// !! es igual a estamos asegurandole a kotlin que la variable no sera null
+    println("Longitud de nombre de usuario !!: ${nombreUsuario.length}")//bajo nuestra responsabilidad
+
+    println("Operador Elvis")// ?: = es igual si lo que esta a la izquierda de ?: no es null entonces ocupalo, de lo contrario usa lo que esta despues del ?:
+    var lenguaje:String? = "Kotlin"
+    lenguaje = null
+    val lenguajepordefault: String = "Java"
+    println("Yo programo en: ${lenguaje?: lenguajepordefault}")
 
 }
