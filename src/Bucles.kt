@@ -27,6 +27,13 @@ fun main() {
     println("Longitud de la cadena: $longitud")
     println("Saldo actual: $saldo")
 
+    nombre.forEach {
+        print(it)
+    }
+    (1..3).forEach { numero ->
+        println(numero)
+    }
+
     println("While & Do While")
     var indice = 0
     while (indice < nombre.length) {// evalua primero y si se cumple repite el bloque de código
@@ -59,4 +66,5 @@ fun main() {
         }
         println(i)
     }
+
 }
